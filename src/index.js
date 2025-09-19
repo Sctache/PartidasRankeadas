@@ -9,7 +9,7 @@ function games (vitorias, derrotas){
 }
 
 
-let saldo = games(10,3)
+let saldo = games(200, 50)
 console.log(saldo)
 
 //Se vitórias for menor do que 10 = Ferro
@@ -22,26 +22,27 @@ console.log(saldo)
 
 let nivel = ""
 
-switch (nivel, saldo){
+//Lembre-se: Switch é uma expressão booleana, somente aceitando, portanto, 'True or False'.
+switch (true){
     case saldo <= 10: nivel = "Ferro"
     break
 
-    case 11 <= saldo <= 20: console.log("Bronze")
+    case saldo <= 20: nivel = "Bronze";
     break
 
-    case 21 <= saldo <= 50: console.log("Prata")
+    case saldo <= 50: nivel = "Prata";
     break
 
-    case 51 <= saldo <= 80: console.log("Ouro")
+    case saldo <= 80: nivel = "Ouro";
     break
 
-    case 81 <= saldo <= 90: console.log("Diamante")
+    case saldo <= 90: nivel = "Diamante";
     break
 
-    case 91 <= saldo <= 100: console.log("Lendário")
+    case saldo <= 100: nivel = "Lendário";
     break
 
-    case saldo >= 101: console.log("Imortal")
+    case saldo >= 101: nivel = "Imortal";
 }
 
 
@@ -50,4 +51,4 @@ switch (nivel, saldo){
 //Saída: Ao final deve se exibir uma mensagem:
 //"O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
 
-console.log("O Heróis tem saldo de " + saldo + " vitórias, e está no nível de " + nivel)
+console.log("O Herói tem saldo de " + saldo + " vitórias, e está no nível de " + nivel)
